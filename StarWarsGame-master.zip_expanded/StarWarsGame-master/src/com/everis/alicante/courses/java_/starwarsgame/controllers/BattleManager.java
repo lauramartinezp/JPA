@@ -61,6 +61,7 @@ public class BattleManager {
 		
 		//termina un lambda
 		
+		
 		for (int i = 0; i< rebels.size(); i++) {
 			int rand = (int) (1+(Math.random()*(1.5 -1)));
 			BattleParticipant rebel = rebels.get(i);
