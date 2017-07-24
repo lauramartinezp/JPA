@@ -58,6 +58,7 @@ public class BattleManager {
 				System.out.println("1 " + rebel.getName()+ " has been defeated");
 			}
 		});
+		
 		//termina un lambda
 		
 		for (int i = 0; i< rebels.size(); i++) {
