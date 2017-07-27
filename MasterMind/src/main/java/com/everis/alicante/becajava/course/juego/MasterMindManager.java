@@ -35,7 +35,6 @@ public class MasterMindManager {
 
 			for (int i = 0; i < 5; i++) {
 				if (numeroStr.charAt(i) == numeroInicialStr.charAt(i)) {
-
 					consulta.setNegras(consulta.getNegras() + 1);
 
 				}
