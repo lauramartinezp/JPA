@@ -24,6 +24,7 @@ public class BookingDAOJPAImpl implements BookingDAO{
 
 	@Override
 	public Booking readById(int id) {
+		
 		return em.find(Booking.class, id);
 	}
 

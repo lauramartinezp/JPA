@@ -32,6 +32,7 @@ public class Test {
 	static EntityManager createEntityManager() {
 		
 		return Persistence.createEntityManagerFactory("JPA_TEST").createEntityManager();
+		
 	}
 
 }
