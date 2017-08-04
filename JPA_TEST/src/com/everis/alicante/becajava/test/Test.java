@@ -26,6 +26,7 @@ public class Test {
 		client.setTelephone("699111201");
 		
 		dao.create(client);
+		
 	}
 	
 	static EntityManager createEntityManager() {
