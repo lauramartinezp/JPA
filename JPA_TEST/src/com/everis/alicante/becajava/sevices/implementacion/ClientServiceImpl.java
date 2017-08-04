@@ -15,14 +15,7 @@ public class ClientServiceImpl implements ClientService {
 	@Override
 	public void createClient(Client client) {
 
-	}
-
-	public ClientDAO getClientDao() {
-		return clientDao;
-	}
-
-	public void setClientDao(ClientDAO clientDao) {
-		this.clientDao = clientDao;
+	clientDao.create(client);
 	}
 
 	@Override
@@ -32,16 +25,25 @@ public class ClientServiceImpl implements ClientService {
 
 	@Override
 	public void updateClient(Client client) {
-		// TODO Auto-generated method stub
 
+		clientDao.update(client);
+		
 	}
 
 	@Override
 	public void findClient(Client client) {
-		// TODO Auto-generated method stub
 
+		clientDao.findAll();
+		
 	}
 
+	public ClientDAO getClientDao() {
+		return clientDao;
+	}
+
+	public void setClientDao(ClientDAO clientDao) {
+		this.clientDao = clientDao;
+	}
 //	public ClientServiceImpl(ClientDAO clientDao) {
 //		super();
 //		this.clientDao = clientDao;
