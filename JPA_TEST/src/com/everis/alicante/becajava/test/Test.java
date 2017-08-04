@@ -6,6 +6,7 @@ import javax.persistence.Persistence;
 import com.everis.alicante.becajava.DAO.ClientDAO;
 import com.everis.alicante.becajava.domain.Client;
 import com.everis.alicante.becajava.implementacion.ClientDAOJPAImpl;
+import com.everis.alicante.becajava.sevices.implementacion.ClientServiceImpl;
 
 public class Test {
 	
@@ -13,9 +14,15 @@ public class Test {
 		
 		EntityManager em = createEntityManager();
 		
+		ClientServiceImpl servicio = new ClientServiceImpl();
+		
 		ClientDAO dao = new ClientDAOJPAImpl(em);
 		
-		System.out.println("Cliente: " + dao.readById(1));
+		servicio.setClientDao(dao);
+		
+		
+		
+		//System.out.println("Cliente: " + dao.readById(1));
 		
 		//Crear un cliente
 		Client client = new Client();
@@ -25,8 +32,9 @@ public class Test {
 		client.setNif("48717958W");
 		client.setTelephone("699111201");
 		
-		dao.create(client);
-		System.out.println("Cliente: " + dao.readById(2));
+		//dao.create(client);
+	//	System.out.println("Cliente: " + dao.readById(2));
+		System.out.println(dao.findAll());
 		
 	}
 	

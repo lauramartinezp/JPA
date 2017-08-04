@@ -17,9 +17,9 @@ public class BookingDAOJPAImpl implements BookingDAO{
 
 	@Override
 	public void create(Booking booking) {
-
+		em.getTransaction().begin();
 		em.merge(booking);
-		
+		em.getTransaction().commit();
 	}
 
 	@Override
@@ -30,16 +30,16 @@ public class BookingDAOJPAImpl implements BookingDAO{
 
 	@Override
 	public void update(Booking booking) {
-
+		em.getTransaction().begin();
 		em.persist(booking);
-		
+		em.getTransaction().commit();
 	}
 
 	@Override
 	public void delete(Booking booking) {
-
+		em.getTransaction().begin();
 		em.remove(booking);
-		
+		em.getTransaction().commit();
 	}
 	
 

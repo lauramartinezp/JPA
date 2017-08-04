@@ -16,8 +16,9 @@ public class VehicleDAOJPAImpl implements VehicleDAO{
 
 	@Override
 	public void create(Vehicle vehicle) {
-
+		em.getTransaction().begin();
 		em.merge(vehicle);
+		em.getTransaction().commit();
 		
 	}
 
@@ -28,14 +29,16 @@ public class VehicleDAOJPAImpl implements VehicleDAO{
 
 	@Override
 	public void update(Vehicle vehicle) {
-
+		em.getTransaction().begin();
 		em.persist(vehicle);
+		em.getTransaction().commit();
 	}
 
 	@Override
 	public void delete(Vehicle vehicle) {
-
+		em.getTransaction().begin();
 		em.remove(vehicle);
+		em.getTransaction().commit();
 	}
 
 }
